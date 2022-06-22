@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentDashboard">
+
+    <RelativeLayout
+        android:id="@+id/appbar_dash"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_identical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:id="@+id/appbar_title_dash"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/str_fragment_dash_title"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
+        <ImageView
+            android:id="@+id/appbar_menu_icon_dash"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_more_vert_24"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/desc_appbar_menu" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/graphview_container"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_below="@+id/appbar_dash"
+        android:background="@color/app_dark_mode"
+        android:padding="16dp"
+        android:contentDescription="@string/desc_data_view">
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graphview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/app_dark_mode"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/graphview_resume"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:background="@color/app_dark_mode"
+        android:layout_below="@+id/graphview_container"/>
+
+    <LinearLayout
+        android:id="@+id/data_view_selector"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/graphview_resume"/>
+
+    <LinearLayout
+        android:id="@+id/log_header"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/data_view_selector"
+        android:paddingTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_history_dark_24"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/str_data_header"
+            android:textSize="14sp"
+            android:layout_marginStart="5dp"/>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollable"
+        android:layout_below="@id/log_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </ScrollView>
+
+</RelativeLayout>

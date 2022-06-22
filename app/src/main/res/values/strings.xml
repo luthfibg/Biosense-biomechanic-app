@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Biosense</string>
+    <string name="bottom_nav_title_acc">Account</string>
+    <string name="bottom_nav_title_home">Home</string>
+    <string name="bottom_nav_title_dash">Dashboard</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="test_acc_fragment">Account</string>
+    <string name="test_hom_fragment">Home</string>
+    <string name="test_das_fragment">Dashboard</string>
+    <!-- TODO: UI String -->
+    <string name="str_app">Biosense</string>
+    <string name="str_fragment_acc_title">Account</string>
+    <string name="str_fragment_home_title">Biosense</string>
+    <string name="str_fragment_dash_title">Dashboard</string>
+    <string name="str_data_header">Activities Logs</string>
+    <string name="str_activity_log_title">Activity Log</string>
+    <string name="str_idlog">Perangkat:</string>
+    <string name="str_iddate">Tanggal &amp; Waktu:</string>
+    <string name="str_idDNI">Nilai DNI:</string>
+    <string name="str_idDNK">Nilai DNK:</string>
+    <string name="str_idRes">Hasil CVL:</string>
+    <string name="str_idFinal">Kesimpulan:</string>
+    <string name="str_progress_data">128</string>
+    <string name="str_home_title">DNI</string>
+    <string name="str_home_title2">Denyut Nadi Istirahat</string>
+    <string name="str_desc">Data will change due to the current result</string>
+    <string name="str_sts_device">Device Stat</string>
+    <string name="str_sts_data">Data Stat</string>
+    <string name="str_sts_gender">Gender</string>
+    <string name="str_sts_age">Age</string>
+    <string name="str_sts_DNMax">DNMax</string>
+    <string name="str_sts_device_val">Off</string>
+    <string name="str_sts_data_val">Unsaved</string>
+    <string name="str_sts_gender_val">Unset</string>
+    <string name="str_sts_age_val">Unset</string>
+    <string name="str_sts_DNMax_val">Unknown</string>
+    <string name="str_btn_start">INCREASE</string>
+    <string name="str_btn_reset">DECREASE</string>
+
+    <!-- TODO: Content description string -->
+    <string name="desc_data_view">Data record are shown by graphic here</string>
+    <string name="desc_appbar_menu">Icon: [more-vertical]</string>
+    <string name="desc_records_icon">Records Item</string>
+    <!-- TODO: App feature-->
+    <string name="feat1">Heartbeat Tracker</string>
+    <string name="feat2">Degree</string>
+    <string name="feat3">Running Tracker</string>
+    <string name="feat4">Coming Soon…</string>
+    <!-- TODO: Extracted Data Sample-->
+    <string name="ex_date_1">Thursday, 16/06/2022 17:04:13</string>
+    <string name="ex_date_2">Thursday, 16/06/2022 07:25:54</string>
+    <string name="act_log_test">Activity Logs is here</string>
+</resources>

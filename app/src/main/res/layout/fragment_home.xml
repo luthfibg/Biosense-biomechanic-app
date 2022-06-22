@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentHome">
+
+    <RelativeLayout
+        android:id="@+id/appbar_home"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_identical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:id="@+id/appbar_title_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:text="@string/str_fragment_home_title"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/appbar_menu_icon_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/desc_appbar_menu"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:src="@drawable/ic_more_vert_24" />
+
+    </RelativeLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/home_headLayout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@+id/appbar_home">
+
+        <TextView
+            android:id="@+id/topTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottomTitle"
+            android:gravity="center"
+            android:text="@string/str_home_title"
+            android:textColor="@color/app_identical_dark"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bottomTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/str_home_title2"
+            android:layout_alignParentBottom="true"
+            android:textSize="18sp"
+            android:textColor="@color/app_identical"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_counterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_below="@+id/home_headLayout"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/SHOW_PROGRESS"
+            android:layout_width="320dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:indeterminateOnly="false"
+            android:max="220"
+            android:progress="128"
+            android:progressDrawable="@drawable/circle" />
+
+        <TextView
+            android:id="@+id/progress_text"
+            android:layout_width="87dp"
+            android:layout_height="81dp"
+            android:layout_alignStart="@+id/SHOW_PROGRESS"
+            android:layout_alignEnd="@+id/SHOW_PROGRESS"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="112dp"
+            android:layout_marginEnd="117dp"
+            android:layout_marginBottom="137dp"
+            android:gravity="center"
+            android:text="@string/str_progress_data"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/app_identical_dark"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_statsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/home_counterLayout"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/statsLay_device"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/statsDeviceData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/statsDevice"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="@string/str_sts_device_val"
+                android:textColor="@color/app_identical"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/statsDevice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/str_sts_device"
+                android:textColor="@color/app_identical_dark"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/statsLay_data"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/statsLay_device"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/statsDataData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/statsData"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="@string/str_sts_data_val"
+                android:textColor="@color/app_identical"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/statsData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/str_sts_data"
+                android:textColor="@color/app_identical_dark"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/statsLay_gender"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/statsLay_data"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/statsGenderData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/statsGender"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="@string/str_sts_gender_val"
+                android:textColor="@color/app_identical"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/statsGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/str_sts_gender"
+                android:textColor="@color/app_identical_dark"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/statsLay_age"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/statsLay_gender"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/statsAgeData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/statsAge"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="@string/str_sts_age_val"
+                android:textColor="@color/app_identical"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/statsAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/str_sts_age"
+                android:textColor="@color/app_identical_dark"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/statsLay_DNMax"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/statsLay_age"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/statsDNMaxData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/statsDNMax"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="@string/str_sts_DNMax_val"
+                android:textColor="@color/app_identical"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/statsDNMax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/str_sts_DNMax"
+                android:textColor="@color/app_identical_dark"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_controlLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/home_statsLayout"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/str_btn_start"
+            android:background="@color/app_identical_dark"
+            android:layout_marginBottom="10dp"/>
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/str_btn_reset"
+            android:background="@color/app_identical"
+            android:layout_below="@+id/btn_start"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

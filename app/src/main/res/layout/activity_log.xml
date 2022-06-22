@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/appbar_log"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_identical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:id="@+id/appbar_title_log"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/str_activity_log_title"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
+        <ImageView
+            android:id="@+id/appbar_menu_icon_log"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_more_vert_24"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/desc_appbar_menu" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/log_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar_log">
+        <LinearLayout
+            android:id="@+id/log_cat"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:id="@+id/idl_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:text="@string/str_idlog"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/dataHead"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginStart="5dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/log_date"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:layout_below="@id/log_cat"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:id="@+id/idl_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:text="@string/str_iddate"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/dataDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginStart="5dp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
